@@ -17,6 +17,6 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
     "vite": "^5.4.1",
-    "wrangler": "^3.68.0"
+    "wrangler": "^4.92.0"
   }
 }

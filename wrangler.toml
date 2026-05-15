@@ -5,7 +5,7 @@ pages_build_output_dir = "dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "double-date"
-database_id = "TBD"
+database_id = "8c80e531-149b-4655-8c45-9e9e0647e3f0"
 
 [[r2_buckets]]
 binding = "MEDIA"
