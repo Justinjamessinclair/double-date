@@ -70,11 +70,12 @@ body {
   background: var(--ink);
   color: var(--cream);
   align-items: center;
-  justify-content: flex-end;
-  padding: env(safe-area-inset-top,20px) var(--s6) env(safe-area-inset-bottom,20px);
-  padding-bottom: max(env(safe-area-inset-bottom,20px), var(--s7));
+  justify-content: center;
+  padding:
+    max(env(safe-area-inset-top,0px), clamp(var(--s6), 5vh, var(--s9))) var(--s6)
+    max(env(safe-area-inset-bottom,0px), clamp(var(--s6), 5vh, var(--s9)));
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .onboard-bg {
@@ -85,11 +86,16 @@ body {
     var(--ink);
 }
 
-.onboard-content { position: relative; z-index: 1; width: 100%; max-width: 440px; }
+.onboard-content {
+  position: relative; z-index: 1;
+  width: 100%; max-width: 440px;
+  margin: auto 0;
+  padding-block: var(--s4);
+}
 
 .onboard-logo {
   display: flex; align-items: center; gap: var(--s3);
-  margin-bottom: var(--s9);
+  margin-bottom: clamp(var(--s7), 6vh, var(--s9));
 }
 
 .onboard-wordmark {
@@ -130,13 +136,13 @@ body {
   font-weight: 300;
   line-height: 1.7;
   color: rgba(245,240,232,0.7);
-  margin-bottom: var(--s8);
+  margin-bottom: clamp(var(--s6), 4vh, var(--s8));
   max-width: 38ch;
 }
 
 .onboard-steps {
   display: flex; flex-direction: column; gap: var(--s4);
-  margin-bottom: var(--s8);
+  margin-bottom: clamp(var(--s6), 4vh, var(--s8));
 }
 
 .onboard-step {
@@ -1252,7 +1258,7 @@ body {
 /* ---- DESKTOP ENHANCEMENT ---- */
 @media (min-width: 640px) {
   .bottom-nav { left: 50%; right: auto; transform: translateX(-50%); min-width: 400px; }
-  .tab-view { padding: var(--s7) var(--s7); margin: 0 auto; }
+  .tab-view { padding: var(--s8) var(--s7) var(--s7); margin: 0 auto; }
   .add-moment-btn { right: calc(50% - 300px + var(--s5)); }
 
   .prompt-card { padding: var(--s8) var(--s7); }
@@ -1303,7 +1309,7 @@ body {
   .nav-btn.active { background: var(--terra-pale); }
 
   .scroll-area { grid-column: 2; grid-row: 2; }
-  .tab-view { max-width: 720px; }
+  .tab-view { max-width: 760px; padding: var(--s9) var(--s8) var(--s8); }
 
   .add-moment-btn {
     position: fixed;
